@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 
-
-
 class ServiceScreen extends StatefulWidget {
   final BluetoothService service;
 
@@ -28,15 +26,13 @@ class _ServiceScreenState extends State<ServiceScreen> {
       _characteristics = widget.service.characteristics;
     });
   }
-  
+
   Future<void> _subscribeToCharacteristic(BluetoothCharacteristic characteristic) async {
     await characteristic.setNotifyValue(true);
     characteristic.onValueReceived.listen((value) {
       setState(() {
         _receivedData = String.fromCharCodes(value);
       });
-      print("Получено сообщение: $_receivedData");
-      
     });
 
     setState(() {
