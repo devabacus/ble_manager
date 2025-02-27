@@ -4,6 +4,8 @@ flutter pub cache clean
 flutter clean
 flutter pub get
 
+flutter pub add permission_handler
+
 
 git tag v0.0.1
 git push origin v0.0.1
