@@ -19,7 +19,7 @@ class BleScanResult {
     return BleScanResult(
       deviceName:
           result.advertisementData.advName.isNotEmpty
-              ? "${result.advertisementData.advName} privet"
+              ? result.advertisementData.advName
               : "Без имени",
       deviceId: result.device.remoteId.toString(),
       device: result.device,
