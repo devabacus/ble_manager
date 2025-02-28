@@ -48,7 +48,7 @@ Future<BluetoothService?> getServiceById(String deviceId, String serviceId) asyn
           .map((r) => BleScanResult(
                 deviceName: r.advertisementData.advName.isNotEmpty
                     ? r.advertisementData.advName
-                    : "Без имени Bdfy",
+                    : "Без имени",
                 deviceId: r.device.remoteId.toString(),
               ))
           .toList();
